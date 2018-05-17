@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/a"
+        android:background="@drawable/gradient"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"></LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/test"
+        android:layout_below="@+id/a"
+        android:layout_width="150dp"
+        android:layout_height="200dp"></LinearLayout>
+</RelativeLayout>
