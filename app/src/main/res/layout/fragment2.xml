@@ -5,295 +5,350 @@
     android:orientation="vertical"
     android:weightSum="2">
 
-  <android.support.v7.widget.CardView
-      android:clipToPadding="false"
-      android:elevation="10dp"
-      android:layout_weight="0.8"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
-      <LinearLayout
-          android:orientation="vertical"
-          android:weightSum="3"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.85"
+        android:clipToPadding="false"
+        android:elevation="10dp">
 
-          <RelativeLayout
-              android:layout_weight="1"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="3">
 
-              <RelativeLayout
-                  android:layout_marginTop="20dp"
-                  android:orientation="vertical"
-                  android:layout_centerHorizontal="true"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content">
-                  <TextView
-                      android:id="@+id/currentBalance"
-                      android:layout_centerHorizontal="true"
-                      android:textSize="18sp"
-                      android:text="Umumiy balans"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
 
-                  <LinearLayout
-                      android:layout_below="@id/currentBalance"
-                      android:layout_width="wrap_content"
-                      android:orientation="horizontal"
-                      android:layout_height="wrap_content">
-                      <RelativeLayout
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content">
-                          <TextView
-                              android:layout_marginTop="5dp"
-                              android:textSize="30sp"
-                              android:textColor="@android:color/black"
-                              android:text="5 000 000"
-                              android:layout_width="wrap_content"
-                              android:layout_height="wrap_content" />
-                      </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
 
-                      <RelativeLayout
-                          android:layout_marginLeft="5dp"
-                          android:layout_width="wrap_content"
-                          android:layout_height="match_parent">
-                          <TextView
-                              android:layout_marginBottom="4dp"
-                              android:layout_alignParentBottom="true"
-                              android:text="so'm"
-                              android:textSize="18sp"
-                              android:layout_width="wrap_content"
-                              android:layout_height="wrap_content" />
-                      </RelativeLayout>
-                  </LinearLayout>
-              </RelativeLayout>
+                    <TextView
+                        android:id="@+id/currentBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Umumiy balans"
+                        android:textSize="18sp" />
 
-          </RelativeLayout>
-          <RelativeLayout
-              android:layout_weight="1"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-              <RelativeLayout
-                  android:layout_marginTop="20dp"
-                  android:orientation="vertical"
-                  android:layout_centerHorizontal="true"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content">
-                  <TextView
-                      android:id="@+id/expenses"
-                      android:layout_centerHorizontal="true"
-                      android:textSize="18sp"
-                      android:text="Maydagi chiqim"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/currentBalance"
+                        android:orientation="horizontal">
 
-                  <LinearLayout
-                      android:layout_below="@id/expenses"
-                      android:layout_width="wrap_content"
-                      android:orientation="horizontal"
-                      android:layout_height="wrap_content">
-                      <RelativeLayout
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content">
-                          <TextView
-                              android:layout_marginTop="5dp"
-                              android:textSize="30sp"
-                              android:textColor="@android:color/black"
-                              android:text="-1 300 000"
-                              android:layout_width="wrap_content"
-                              android:layout_height="wrap_content" />
-                      </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                      <RelativeLayout
-                          android:layout_marginLeft="5dp"
-                          android:layout_width="wrap_content"
-                          android:layout_height="match_parent">
-                          <TextView
-                              android:layout_marginBottom="4dp"
-                              android:layout_alignParentBottom="true"
-                              android:text="so'm"
-                              android:textSize="18sp"
-                              android:layout_width="wrap_content"
-                              android:layout_height="wrap_content" />
-                      </RelativeLayout>
-                  </LinearLayout>
-              </RelativeLayout>
-          </RelativeLayout>
-          <RelativeLayout
-              android:layout_weight="1"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="5 000 000"
+                                android:textColor="@android:color/black"
+                                android:textSize="30sp" />
+                        </RelativeLayout>
 
-              <ImageView
-                  android:src="@drawable/visibility"
-                  android:layout_centerInParent="true"
-                  android:layout_width="30dp"
-                  android:layout_height="30dp" />
-          </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp">
 
-      </LinearLayout>
-  </android.support.v7.widget.CardView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="4dp"
+                                android:text="so'm"
+                                android:textSize="18sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/expenses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Maydagi chiqim"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/expenses"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="-1 300 000"
+                                android:textColor="@android:color/black"
+                                android:textSize="30sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="4dp"
+                                android:text="so'm"
+                                android:textSize="18sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/visibility" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 
     <LinearLayout
 
-        android:orientation="vertical"
-        android:weightSum="2"
-        android:layout_weight="1.2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        android:orientation="vertical"
+        android:weightSum="2">
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:background="#F6F6F6"
-            android:layout_weight="0.9"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:background="#F6F6F6"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
             <RelativeLayout
-                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
                 <ImageView
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/bank_transfer"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp" />
+                    android:id="@+id/sendMoney"
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/bank_transfer" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sendMoney"
+                    android:layout_centerHorizontal="true"
+                    android:text="Pul o'tkazmasi"
+                    android:textColor="@android:color/black" />
             </RelativeLayout>
+
             <RelativeLayout
-                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
                 <ImageView
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/bank_transfer2"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp" />
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/borrowMoney"
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/bank_transfer2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/borrowMoney"
+                    android:layout_centerHorizontal="true"
+                    android:text="Pul so'rash"
+                    android:textColor="@android:color/black" />
             </RelativeLayout>
 
         </LinearLayout>
 
         <View
-            android:background="@color/customColor3"
             android:layout_width="match_parent"
-            android:layout_height="1dp"/>
+            android:layout_height="1dp"
+            android:background="@color/customColor3" />
 
         <RelativeLayout
-            android:layout_weight="1.1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1.1">
 
             <LinearLayout
-                android:layout_centerInParent="true"
-                android:weightSum="4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="30dp"
+                android:weightSum="4">
 
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_weight="1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp">
+
                         <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
                             android:layout_centerHorizontal="true"
-                            android:src="@drawable/history"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp" />
+                            android:src="@drawable/history" />
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:textAlignment="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
                             android:text="To'lovlar monitoringi"
-                            android:layout_centerHorizontal="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:textAlignment="center" />
                     </RelativeLayout>
 
                 </LinearLayout>
+
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_weight="1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp">
+
                         <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
                             android:layout_centerHorizontal="true"
-                            android:src="@drawable/wallet"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp" />
+                            android:src="@drawable/wallet" />
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:textAlignment="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
                             android:text="Xizmatga      to'lov"
-                            android:layout_centerHorizontal="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:textAlignment="center" />
                     </RelativeLayout>
 
                 </LinearLayout>
+
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_weight="1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp">
+
                         <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
                             android:layout_centerHorizontal="true"
-                            android:src="@drawable/placeholder"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp" />
+                            android:src="@drawable/placeholder" />
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:textAlignment="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
                             android:text="Joyida         to'lovlar"
-                            android:layout_centerHorizontal="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:textAlignment="center" />
                     </RelativeLayout>
 
                 </LinearLayout>
+
                 <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_weight="1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp">
+
                         <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
                             android:layout_centerHorizontal="true"
-                            android:src="@drawable/my_cards"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp" />
+                            android:src="@drawable/my_cards" />
                     </RelativeLayout>
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:textAlignment="center"
-                            android:text="Mening kartalarim"
-                            android:layout_centerHorizontal="true"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Mening kartalarim"
+                            android:textAlignment="center" />
                     </RelativeLayout>
 
                 </LinearLayout>
