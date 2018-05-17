@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.developer.payme.Adapters.ViewPagerAdapter;
 import com.example.developer.payme.fragments.fragment1;
@@ -48,13 +49,42 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    private void addTabs(ViewPager viewPager) {
+    private void addTabs(final ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new fragment1(), "Qabul qiluvchilar");
         adapter.addFrag(new fragment2(), "Asosiy");
         adapter.addFrag(new fragment3(), "Saqlanganlar");
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(1);
+        viewPager.setPageTransformer(false, new ViewPager.PageTransformer() {
+            @Override
+            public void transformPage(View view, float position) {
+                int pageWidth = view.getWidth();
+                if (
+                        position < -1) {
+
+                    view.setAlpha(0);
+                } else if (position <= 0) {
+
+                    view.setAlpha(1);
+                    view.setTranslationX(0);
+                    view.setScaleX(1);
+                    view.setScaleY(1);
+                } else if (position <= 1) {
+                    view.setAlpha(1 - position);
+                    view.setTranslationX(pageWidth * -position);
+
+                    int MIN_SCALE =  1;
+                    float scaleFactor = MIN_SCALE + (1 - MIN_SCALE) * (1 - Math.abs(position));
+                    view.setScaleX(scaleFactor);
+                    view.setScaleY(scaleFactor);
+                } else
+                {
+
+                    view.setAlpha(0);
+                }
+            }
+        });
     }
 
     @Override

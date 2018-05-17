@@ -322,6 +322,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:clickable="true"
                     android:id="@+id/btn0"
                     android:background="@drawable/back_clicked"
                     android:layout_width="match_parent"
