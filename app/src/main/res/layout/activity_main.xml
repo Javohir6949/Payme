@@ -19,7 +19,294 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        app:menu="@menu/activity_main_drawer" />
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/items"
+                android:padding="15dp"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/home"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Asosiy"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/coin"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Qarz olish"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/payment"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="To'lov xizmatlari"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/settings"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Sozlamalar"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@drawable/help"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:text="Yordam"
+                            android:textColor="@android:color/black"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:background="#F7F8FC"
+                    android:weightSum="2"
+                    android:orientation="vertical"
+                    android:layout_marginTop="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+                    <RelativeLayout
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:background="#F7F8FC"
+                            android:id="@+id/paymeGo"
+                            android:src="@drawable/diamond"
+                            android:layout_centerVertical="true"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp" />
+
+                        <LinearLayout
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/paymeGo"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="16sp"
+                                android:text="Payme Go"
+                                android:textColor="@android:color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:paddingRight="5dp"
+                                android:textSize="12sp"
+                                android:text="Payme akkauntidagi QR-kod orqali tovarlar va xizmatlar uchun to'lovlar amalga oshirish"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_marginLeft="15dp"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:tint="#26CFCC"
+                            android:id="@+id/qrSkaner"
+                            android:src="@drawable/qrscan"
+                            android:layout_centerVertical="true"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp" />
+
+                        <LinearLayout
+                            android:paddingRight="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/qrSkaner"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="16sp"
+                                android:text="QR Skaner"
+                                android:textColor="@android:color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:textSize="12sp"
+                                android:text="QR-kodni skaner qiling va to'lovni amalga oshirish imkoniyatini qo'lga kiriting"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+                    <LinearLayout
+                        android:layout_marginBottom="5dp"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/back"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:text="Chiqish"
+                                android:textColor="@android:color/black"
+                                android:layout_marginLeft="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </android.support.design.widget.NavigationView>
+
+
 
 </android.support.v4.widget.DrawerLayout>

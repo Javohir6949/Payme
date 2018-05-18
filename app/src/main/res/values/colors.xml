@@ -13,4 +13,5 @@
     <color name="customColor8">#343434</color>
     <color name="customColor9">#23C0A5</color>
     <color name="customColor10">#9E9E9E</color>
+    <color name="btn_not_enabled">#CFCFCF</color>
 </resources>

@@ -1,6 +1,7 @@
 package com.example.developer.payme.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -12,12 +13,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.developer.payme.activities.AddNewCard;
 import com.example.developer.payme.R;
 import com.example.developer.payme.model.Card;
 
+import java.lang.reflect.GenericArrayType;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.Inflater;
 
 public class fragment1 extends Fragment {
     FloatingActionButton fab;
@@ -42,9 +44,17 @@ public class fragment1 extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(new MyAdapter());
+        fab = view.findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), AddNewCard.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
-
     class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         @Override
         public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
