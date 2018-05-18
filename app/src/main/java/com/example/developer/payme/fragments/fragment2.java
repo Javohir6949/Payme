@@ -36,9 +36,13 @@ public class fragment2 extends Fragment implements View.OnClickListener {
         expense = view.findViewById(R.id.expense);
         hide2 = view.findViewById(R.id.hide2);
 
-        visibility.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.visibility: {
                 Log.d("bosildi", "sdsds");
                 if (visible) {
                     Log.d("bosildi", "sdsds");
@@ -53,17 +57,6 @@ public class fragment2 extends Fragment implements View.OnClickListener {
                     wordSum2.setVisibility(View.VISIBLE);
                     expense.setVisibility(View.VISIBLE);
                 }
-            }
-        });
-
-        return view;
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.visibility: {
-
                 break;
             }
         }
