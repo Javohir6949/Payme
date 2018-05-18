@@ -18,7 +18,7 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
         android:clickable="true"
-        android:src="@drawable/plus2"
+        android:src="@drawable/add"
         />
 
 </RelativeLayout>

@@ -1,5 +1,7 @@
 package com.example.developer.payme.activities;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -34,6 +36,19 @@ public class AddNewCard extends AppCompatActivity implements TextWatcher {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        btn_Save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (cardNumber.getText().toString().length() == 19 && owner.getText().toString().length() != 0) {
+                    Intent returnIntent = new Intent();
+                    returnIntent.putExtra("cardNumber",cardNumber.getText().toString());
+                    returnIntent.putExtra("owner",owner.getText().toString());
+                    setResult(Activity.RESULT_OK,returnIntent);
+                    finish();
+                }
+            }
+        });
 
     }
 

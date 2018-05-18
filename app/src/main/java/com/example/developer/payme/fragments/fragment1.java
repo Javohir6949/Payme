@@ -1,6 +1,7 @@
 package com.example.developer.payme.fragments;
 
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -25,6 +26,7 @@ public class fragment1 extends Fragment {
     FloatingActionButton fab;
     private RecyclerView recyclerView;
     private List<Card> cards;
+    private MyAdapter adapter;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,18 +45,43 @@ public class fragment1 extends Fragment {
         cards.add(new Card("Tosheva Gulnoza","8600  36**  ****  2365"));
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(new MyAdapter());
+        adapter = new MyAdapter();
+
+        recyclerView.setAdapter(adapter);
         fab = view.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), AddNewCard.class);
-                startActivity(intent);
+                startActivityForResult(intent,1);
             }
         });
 
         return view;
     }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1){
+            if (resultCode == Activity.RESULT_OK){
+
+                String cardNumber = data.getStringExtra("cardNumber");
+                String encoded = EncodedCardNumber(cardNumber);
+                String owner = data.getStringExtra("owner");
+                cards.add(new Card(owner,encoded));
+                adapter.notifyDataSetChanged();
+
+            }
+        }
+    }
+
+    private String EncodedCardNumber(String cardNumber) {
+        String part1 = cardNumber.substring(0,7);
+        String part2 = "**  ****  ";
+        String part3 = cardNumber.substring(15,19);
+        return part1+part2+part3;
+    }
+
     class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         @Override
         public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
